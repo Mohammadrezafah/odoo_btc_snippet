@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="btc_snippet" name="BTC Price Snippet">
+        <section class="container btc_container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>BTC Chart</h1>
+                    <canvas id="btcChart"></canvas>
+                </div>
+            </div>
+        </section>
+    </template>
+    <template id="external_btc_snippets" inherit_id="website.snippets" priority="8">
+        <xpath expr="//div[@id='snippet_feature']//t[@t-snippet][last()]" position="after">
+                <t t-snippet="btc_snippet.btc_snippet"/>
+        </xpath>
+    </template>
+</odoo>
